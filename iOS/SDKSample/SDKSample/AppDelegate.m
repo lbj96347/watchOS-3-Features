@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <WatchConnectivity/WatchConnectivity.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WCSessionDelegate>
 
 @end
 
@@ -41,5 +42,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - WatchSession Delegate Methods
+
+-(void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *,id> *)message replyHandler:(nonnull void (^)(NSDictionary<NSString *,id> * _Nonnull))replyHandler {
+    NSLog(@"apple watch is sending message");
+}
+
 
 @end

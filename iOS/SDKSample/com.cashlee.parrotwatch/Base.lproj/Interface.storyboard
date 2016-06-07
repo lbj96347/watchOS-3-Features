@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="com_cashlee_parrotwatch" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Ready" id="Vpk-GY-kdK">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.19453099718792122" green="0.87434554973821987" blue="0.19196446650946847" alpha="1" colorSpace="calibratedRGB"/>
+                        </button>
+                        <label alignment="center" text="x : 0" id="0z8-iy-R5L">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </label>
+                        <label alignment="center" text="y : 0" id="IWS-UH-qNc">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </label>
+                        <label alignment="center" text="z : 0" id="XMp-YG-nDO">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </label>
+                        <dateLabel width="1" alignment="left" textAlignment="center" id="N3e-Lc-uqu">
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <dateFormatterStyle key="dateStyle" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" short="YES"/>
+                        </dateLabel>
+                    </items>
+                    <connections>
+                        <outlet property="statusLabel" destination="Vpk-GY-kdK" id="3by-hV-7GT"/>
+                        <outlet property="xLabel" destination="0z8-iy-R5L" id="wgj-dZ-nMd"/>
+                        <outlet property="yLabel" destination="IWS-UH-qNc" id="SaI-A2-o6g"/>
+                        <outlet property="zLabel" destination="XMp-YG-nDO" id="wvK-N9-fEb"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="565" y="368"/>
         </scene>
     </scenes>
 </document>

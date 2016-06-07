@@ -523,7 +523,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
@@ -573,7 +573,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
@@ -589,7 +589,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -640,7 +640,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
@@ -692,7 +692,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
@@ -710,7 +710,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -964,6 +964,7 @@
 				661895A31D06CB34009BD6EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		661895A51D06CB34009BD6EF /* Build configuration list for PBXNativeTarget "com.cashlee.parrotwatch" */ = {
 			isa = XCConfigurationList;
@@ -973,6 +974,7 @@
 				661895A81D06CB34009BD6EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8B03D7E1C7DA4E900149B4F /* Build configuration list for PBXProject "SDKSample" */ = {
 			isa = XCConfigurationList;
