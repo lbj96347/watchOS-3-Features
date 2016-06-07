@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		661895891D06CB33009BD6EF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661895871D06CB33009BD6EF /* Interface.storyboard */; };
+		6618958B1D06CB33009BD6EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6618958A1D06CB33009BD6EF /* Assets.xcassets */; };
+		661895921D06CB34009BD6EF /* com.cashlee.parrotwatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 661895911D06CB34009BD6EF /* com.cashlee.parrotwatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		661895971D06CB34009BD6EF /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661895961D06CB34009BD6EF /* InterfaceController.swift */; };
+		661895991D06CB34009BD6EF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661895981D06CB34009BD6EF /* ExtensionDelegate.swift */; };
+		6618959B1D06CB34009BD6EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6618959A1D06CB34009BD6EF /* Assets.xcassets */; };
+		6618959F1D06CB34009BD6EF /* com.cashlee.parrotwatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 661895851D06CB33009BD6EF /* com.cashlee.parrotwatch.app */; };
 		F828FA6A1C8604150075E867 /* JSDrone.m in Sources */ = {isa = PBXBuildFile; fileRef = F828FA691C8604150075E867 /* JSDrone.m */; };
 		F828FA701C8608B90075E867 /* JSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F828FA6F1C8608B90075E867 /* JSVC.m */; };
 		F828FA731C860BEB0075E867 /* JSVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F828FA721C860BEB0075E867 /* JSVideoView.m */; };
@@ -27,7 +34,58 @@
 		F8F74D441C7DEAB700DC5FA1 /* BebopDrone.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F74D431C7DEAB700DC5FA1 /* BebopDrone.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		661895931D06CB34009BD6EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B03D7B1C7DA4E900149B4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 661895901D06CB34009BD6EF;
+			remoteInfo = "com.cashlee.parrotwatch Extension";
+		};
+		6618959D1D06CB34009BD6EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B03D7B1C7DA4E900149B4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 661895841D06CB33009BD6EF;
+			remoteInfo = com.cashlee.parrotwatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		661895A41D06CB34009BD6EF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				661895921D06CB34009BD6EF /* com.cashlee.parrotwatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		661895A91D06CB34009BD6EF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				6618959F1D06CB34009BD6EF /* com.cashlee.parrotwatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		661895851D06CB33009BD6EF /* com.cashlee.parrotwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.cashlee.parrotwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		661895881D06CB33009BD6EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		6618958A1D06CB33009BD6EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6618958C1D06CB33009BD6EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		661895911D06CB34009BD6EF /* com.cashlee.parrotwatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "com.cashlee.parrotwatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		661895961D06CB34009BD6EF /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		661895981D06CB34009BD6EF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		6618959A1D06CB34009BD6EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6618959C1D06CB34009BD6EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F828FA681C8604150075E867 /* JSDrone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSDrone.h; path = Drones/JSDrone.h; sourceTree = "<group>"; };
 		F828FA691C8604150075E867 /* JSDrone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSDrone.m; path = Drones/JSDrone.m; sourceTree = "<group>"; };
 		F828FA6E1C8608B90075E867 /* JSVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSVC.h; path = ViewControllers/JSVC.h; sourceTree = "<group>"; };
@@ -65,6 +123,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6618958E1D06CB34009BD6EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8B03D801C7DA4E900149B4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,10 +140,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		661895861D06CB33009BD6EF /* com.cashlee.parrotwatch */ = {
+			isa = PBXGroup;
+			children = (
+				661895871D06CB33009BD6EF /* Interface.storyboard */,
+				6618958A1D06CB33009BD6EF /* Assets.xcassets */,
+				6618958C1D06CB33009BD6EF /* Info.plist */,
+			);
+			path = com.cashlee.parrotwatch;
+			sourceTree = "<group>";
+		};
+		661895951D06CB34009BD6EF /* com.cashlee.parrotwatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				661895961D06CB34009BD6EF /* InterfaceController.swift */,
+				661895981D06CB34009BD6EF /* ExtensionDelegate.swift */,
+				6618959A1D06CB34009BD6EF /* Assets.xcassets */,
+				6618959C1D06CB34009BD6EF /* Info.plist */,
+			);
+			path = "com.cashlee.parrotwatch Extension";
+			sourceTree = "<group>";
+		};
 		F8B03D7A1C7DA4E900149B4F = {
 			isa = PBXGroup;
 			children = (
 				F8B03D851C7DA4E900149B4F /* SDKSample */,
+				661895861D06CB33009BD6EF /* com.cashlee.parrotwatch */,
+				661895951D06CB34009BD6EF /* com.cashlee.parrotwatch Extension */,
 				F8B03D841C7DA4E900149B4F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				F8B03D831C7DA4E900149B4F /* SDKSample.app */,
+				661895851D06CB33009BD6EF /* com.cashlee.parrotwatch.app */,
+				661895911D06CB34009BD6EF /* com.cashlee.parrotwatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +264,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		661895841D06CB33009BD6EF /* com.cashlee.parrotwatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 661895A51D06CB34009BD6EF /* Build configuration list for PBXNativeTarget "com.cashlee.parrotwatch" */;
+			buildPhases = (
+				661895831D06CB33009BD6EF /* Resources */,
+				661895A41D06CB34009BD6EF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				661895941D06CB34009BD6EF /* PBXTargetDependency */,
+			);
+			name = com.cashlee.parrotwatch;
+			productName = com.cashlee.parrotwatch;
+			productReference = 661895851D06CB33009BD6EF /* com.cashlee.parrotwatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		661895901D06CB34009BD6EF /* com.cashlee.parrotwatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 661895A01D06CB34009BD6EF /* Build configuration list for PBXNativeTarget "com.cashlee.parrotwatch Extension" */;
+			buildPhases = (
+				6618958D1D06CB34009BD6EF /* Sources */,
+				6618958E1D06CB34009BD6EF /* Frameworks */,
+				6618958F1D06CB34009BD6EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "com.cashlee.parrotwatch Extension";
+			productName = "com.cashlee.parrotwatch Extension";
+			productReference = 661895911D06CB34009BD6EF /* com.cashlee.parrotwatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		F8B03D821C7DA4E900149B4F /* SDKSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8B03DB01C7DA4E900149B4F /* Build configuration list for PBXNativeTarget "SDKSample" */;
@@ -182,10 +306,12 @@
 				F8B03D7F1C7DA4E900149B4F /* Sources */,
 				F8B03D801C7DA4E900149B4F /* Frameworks */,
 				F8B03D811C7DA4E900149B4F /* Resources */,
+				661895A91D06CB34009BD6EF /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6618959E1D06CB34009BD6EF /* PBXTargetDependency */,
 			);
 			name = SDKSample;
 			productName = SDKSample;
@@ -198,9 +324,16 @@
 		F8B03D7B1C7DA4E900149B4F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Parrot;
 				TargetAttributes = {
+					661895841D06CB33009BD6EF = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					661895901D06CB34009BD6EF = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					F8B03D821C7DA4E900149B4F = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -220,11 +353,30 @@
 			projectRoot = "";
 			targets = (
 				F8B03D821C7DA4E900149B4F /* SDKSample */,
+				661895841D06CB33009BD6EF /* com.cashlee.parrotwatch */,
+				661895901D06CB34009BD6EF /* com.cashlee.parrotwatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		661895831D06CB33009BD6EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6618958B1D06CB33009BD6EF /* Assets.xcassets in Resources */,
+				661895891D06CB33009BD6EF /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6618958F1D06CB34009BD6EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6618959B1D06CB34009BD6EF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8B03D811C7DA4E900149B4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,11 +401,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "LATEST_SDK_VERSION='3.9.1'\nSDK_PACKET_NAME='ARSDK3_iOS_3_9_1.zip'\nSDK_DOWNLOAD_ADDRESS=\"https://github.com/Parrot-Developers/arsdk_manifests/releases/download/ARSDK3_version_3_9_1/$SDK_PACKET_NAME\"\n\nPREBUILT_FOLDER_PATH='ARSDK3_iOS'\nSDK_VERSION_FILE='sdk_version.txt'\nVERSION_FILEPATH=\"$PREBUILT_FOLDER_PATH/$SDK_VERSION_FILE\"\nshould_download=YES\n\nif [ \"${CONFIGURATION}\" != \"DebugWithLocalSDK\" ]; then\n    installed_version=$(cat $VERSION_FILEPATH 2>/dev/null)\n\n    if [ x\"$installed_version\" = x\"$LATEST_SDK_VERSION\" ]; then\n        should_download=NO\n    fi\n\n    if [ x\"$should_download\" = xYES ] ; then\n        echo \"Installing the version $LATEST_SDK_VERSION of the ARSDK\"\n\n        #remove current sdk\n        rm -rf $PREBUILT_FOLDER_PATH\n\n        #download and unzip latest sdk\n        wget $SDK_DOWNLOAD_ADDRESS\n        unzip $SDK_PACKET_NAME -d $PREBUILT_FOLDER_PATH\n\n        #write the current version in the version file\n        echo $LATEST_SDK_VERSION > $VERSION_FILEPATH\n\n        #remove downloaded zip file\n        rm $SDK_PACKET_NAME\n    fi\nfi\n\n";
+			shellScript = ":<<!\nLATEST_SDK_VERSION='3.9.1'\nSDK_PACKET_NAME='ARSDK3_iOS_3_9_1.zip'\nSDK_DOWNLOAD_ADDRESS=\"https://github.com/Parrot-Developers/arsdk_manifests/releases/download/ARSDK3_version_3_9_1/$SDK_PACKET_NAME\"\n\nPREBUILT_FOLDER_PATH='ARSDK3_iOS'\nSDK_VERSION_FILE='sdk_version.txt'\nVERSION_FILEPATH=\"$PREBUILT_FOLDER_PATH/$SDK_VERSION_FILE\"\nshould_download=YES\n\nif [ \"${CONFIGURATION}\" != \"DebugWithLocalSDK\" ]; then\n    installed_version=$(cat $VERSION_FILEPATH 2>/dev/null)\n\n    if [ x\"$installed_version\" = x\"$LATEST_SDK_VERSION\" ]; then\n        should_download=NO\n    fi\n\n    if [ x\"$should_download\" = xYES ] ; then\n        echo \"Installing the version $LATEST_SDK_VERSION of the ARSDK\"\n\n        #remove current sdk\n        rm -rf $PREBUILT_FOLDER_PATH\n\n        #download and unzip latest sdk\n        wget $SDK_DOWNLOAD_ADDRESS\n        unzip $SDK_PACKET_NAME -d $PREBUILT_FOLDER_PATH\n\n        #write the current version in the version file\n        echo $LATEST_SDK_VERSION > $VERSION_FILEPATH\n\n        #remove downloaded zip file\n        rm $SDK_PACKET_NAME\n    fi\nfi\n!\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6618958D1D06CB34009BD6EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				661895991D06CB34009BD6EF /* ExtensionDelegate.swift in Sources */,
+				661895971D06CB34009BD6EF /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8B03D7F1C7DA4E900149B4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,7 +439,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		661895941D06CB34009BD6EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 661895901D06CB34009BD6EF /* com.cashlee.parrotwatch Extension */;
+			targetProxy = 661895931D06CB34009BD6EF /* PBXContainerItemProxy */;
+		};
+		6618959E1D06CB34009BD6EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 661895841D06CB33009BD6EF /* com.cashlee.parrotwatch */;
+			targetProxy = 6618959D1D06CB34009BD6EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		661895871D06CB33009BD6EF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				661895881D06CB33009BD6EF /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		F8B03D8F1C7DA4E900149B4F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -298,6 +480,242 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		661895A11D06CB34009BD6EF /* DebugWithPrecompiledSDK */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "com.cashlee.parrotwatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = DebugWithPrecompiledSDK;
+		};
+		661895A21D06CB34009BD6EF /* DebugWithLocalSDK */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "com.cashlee.parrotwatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = DebugWithLocalSDK;
+		};
+		661895A31D06CB34009BD6EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = "com.cashlee.parrotwatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		661895A61D06CB34009BD6EF /* DebugWithPrecompiledSDK */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_MODULE = com_cashlee_parrotwatch_Extension;
+				INFOPLIST_FILE = com.cashlee.parrotwatch/Info.plist;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = DebugWithPrecompiledSDK;
+		};
+		661895A71D06CB34009BD6EF /* DebugWithLocalSDK */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_MODULE = com_cashlee_parrotwatch_Extension;
+				INFOPLIST_FILE = com.cashlee.parrotwatch/Info.plist;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = DebugWithLocalSDK;
+		};
+		661895A81D06CB34009BD6EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = com_cashlee_parrotwatch_Extension;
+				INFOPLIST_FILE = com.cashlee.parrotwatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 		F828FA821C8770830075E867 /* DebugWithLocalSDK */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -374,7 +792,7 @@
 					"-lz",
 					"-lssl",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.parrot.SDKSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = DebugWithLocalSDK;
@@ -493,7 +911,7 @@
 					"-lz",
 					"-lssl",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.parrot.SDKSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = DebugWithPrecompiledSDK;
@@ -530,7 +948,7 @@
 					"-lz",
 					"-lssl",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.parrot.SDKSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashlee.SDKSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -538,6 +956,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		661895A01D06CB34009BD6EF /* Build configuration list for PBXNativeTarget "com.cashlee.parrotwatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				661895A11D06CB34009BD6EF /* DebugWithPrecompiledSDK */,
+				661895A21D06CB34009BD6EF /* DebugWithLocalSDK */,
+				661895A31D06CB34009BD6EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		661895A51D06CB34009BD6EF /* Build configuration list for PBXNativeTarget "com.cashlee.parrotwatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				661895A61D06CB34009BD6EF /* DebugWithPrecompiledSDK */,
+				661895A71D06CB34009BD6EF /* DebugWithLocalSDK */,
+				661895A81D06CB34009BD6EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F8B03D7E1C7DA4E900149B4F /* Build configuration list for PBXProject "SDKSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
