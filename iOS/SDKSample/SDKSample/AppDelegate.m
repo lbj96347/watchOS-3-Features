@@ -18,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    if([WCSession isSupported]){
+        WCSession * session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+    }
+    
     return YES;
 }
 
@@ -45,8 +52,14 @@
 
 #pragma mark - WatchSession Delegate Methods
 
+-(void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *,id> *)message {
+    NSLog(@"apple watch is sending message (no reply) : %@" , message);
+}
+
 -(void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *,id> *)message replyHandler:(nonnull void (^)(NSDictionary<NSString *,id> * _Nonnull))replyHandler {
-    NSLog(@"apple watch is sending message");
+    NSLog(@"apple watch is sending message %@" , message);
+    NSNotificationCenter * nsnc = [NSNotificationCenter defaultCenter];
+    [nsnc postNotificationName:@"notificationAcceleration" object:message];
 }
 
 

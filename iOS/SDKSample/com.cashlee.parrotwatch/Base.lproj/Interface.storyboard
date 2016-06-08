@@ -13,6 +13,9 @@
                         <button width="1" alignment="left" title="Ready" id="Vpk-GY-kdK">
                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="backgroundColor" red="0.19453099718792122" green="0.87434554973821987" blue="0.19196446650946847" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="switchMotion:" destination="AgC-eL-Hgc" id="T6Y-Ty-HBv"/>
+                            </connections>
                         </button>
                         <label alignment="center" text="x : 0" id="0z8-iy-R5L">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

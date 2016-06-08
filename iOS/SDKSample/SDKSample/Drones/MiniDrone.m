@@ -53,6 +53,10 @@
     } else {
         ARCONTROLLER_Device_Start (_deviceController);
     }
+    
+    NSNotificationCenter * nsnc = [NSNotificationCenter defaultCenter];
+    [nsnc addObserver:self selector:@selector(updateMotionOfAircraft:) name:@"notificationAcceleration" object:nil];
+    
 }
 
 - (void)disconnect {
@@ -152,6 +156,15 @@
     _sdCardModule = [[SDCardModule alloc] initWithFtpListManager:ftpListManager andFtpQueueManager:ftpQueueManager];
     _sdCardModule.delegate = self;
 }
+
+#pragma mark update aircraft motion 
+
+-(void)updateMotionOfAircraft:(id)sender {
+    
+    NSLog(@"print motion : %@" , sender );
+    
+}
+
 
 #pragma mark commands
 - (void)emergency {
