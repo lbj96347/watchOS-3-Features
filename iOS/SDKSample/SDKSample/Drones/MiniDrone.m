@@ -164,12 +164,12 @@
     
     NSDictionary * acData = [notification userInfo];
     
-    NSLog(@"print motion : %@" , acData );
-    
     int xValue = (int)([acData[@"x"] floatValue] * 100 );
     int yValue = (int)([acData[@"y"] floatValue] * 100 );
     
-    if ( 100 > abs(xValue) && abs(xValue) > 50 ) {
+    NSLog(@"print x value : %d \n and y value : %d " , xValue , yValue );
+    
+    if ( abs(xValue) > 70 ) {
         if (xValue > 0) {
             //前进
             [self setFlag:1];
@@ -179,12 +179,9 @@
             [self setFlag:1];
             [self setPitch:-50];
         }
-    }else{
-        [self setFlag:0];
-        [self setPitch:0];
     }
     
-    if ( 100 > abs(yValue) && abs(yValue) > 50 ) {
+    if ( abs(yValue) > 70 ) {
         if (yValue > 0) {
             //往左
             [self setFlag:1];
@@ -194,11 +191,13 @@
             [self setFlag:1];
             [self setRoll:50];
         }
-    }else{
-        [self setFlag:0];
-        [self setRoll:0];
     }
     
+    if ( abs(yValue) < 70 && abs(xValue) < 70 ) {
+        [self setFlag:0];
+        [self setRoll:0];
+        [self setPitch:0];
+    }
     
 }
 

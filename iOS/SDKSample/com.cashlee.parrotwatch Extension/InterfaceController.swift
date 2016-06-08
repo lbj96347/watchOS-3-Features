@@ -16,6 +16,10 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
     
     var motionMgr:CMMotionManager?
     var motionQueue:NSOperationQueue?
+    
+    var altimeterMgr:CMAltimeter?
+    var altimeterQueue:NSOperationQueue?
+    
     var defaultSession:WCSession?
     
     @IBOutlet var statusLabel: WKInterfaceButton!
@@ -26,15 +30,24 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         // Configure interface objects here.
+        
         let motionManager:CMMotionManager = CMMotionManager.init()
         self.motionMgr = motionManager
         self.motionQueue = NSOperationQueue.mainQueue()
-        self.motionMgr?.accelerometerUpdateInterval = 0.1
+        self.motionMgr?.accelerometerUpdateInterval = 0.35
+        
+        /*
+        let altimeterManager:CMAltimeter = CMAltimeter.init()
+        self.altimeterMgr = altimeterManager
+        self.altimeterQueue = NSOperationQueue.mainQueue()
+        */
+        
         if(WCSession.isSupported()){
             self.defaultSession = WCSession.defaultSession()
             self.defaultSession?.delegate = self;
             self.defaultSession?.activateSession()
         }
+        
     }
 
     override func willActivate() {
@@ -70,6 +83,20 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
             self.yLabel?.setText("y : 0")
             self.zLabel?.setText("z : 0")
             
+            /*
+            self.altimeterMgr?.startRelativeAltitudeUpdatesToQueue(self.altimeterQueue!, withHandler: { (altitudeData, error) in
+                let altitude:CMAltitudeData = altitudeData!
+                let sendData:NSDictionary = ["altitude" : ["relativeAltitude": altitude.relativeAltitude , "pressure" : altitude.pressure ]]
+                if(WCSession.isSupported()){
+                    self.defaultSession?.sendMessage( sendData as! [String : AnyObject] , replyHandler: { (replyMsg) in
+                            //
+                    }, errorHandler: { (error) in
+                            //
+                    })
+                }
+            })
+            */
+            
             self.motionMgr?.startAccelerometerUpdatesToQueue(self.motionQueue!, withHandler: { (accel, error) in
                 if((error == nil)){
                     
@@ -83,6 +110,8 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
                     self.xLabel?.setText(x)
                     self.yLabel?.setText(y)
                     self.zLabel?.setText(z)
+                    
+                    //let sendData:NSDictionary =  ["acceletation" : [ "x" : data.x , "y" : data.y , "z" : data.z ]]
                     
                     let sendData:NSDictionary =  [ "x" : data.x , "y" : data.y , "z" : data.z ]
                     
@@ -107,6 +136,8 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
         }else{
             
             self.motionMgr?.stopAccelerometerUpdates()
+            
+            self.altimeterMgr?.stopRelativeAltitudeUpdates()
             
             self.statusLabel?.setTitle("Start")
             
