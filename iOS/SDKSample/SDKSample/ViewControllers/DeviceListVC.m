@@ -88,13 +88,13 @@
 - (void)registerNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enteredBackground:) name: UIApplicationDidEnterBackgroundNotification object: nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForeground:) name: UIApplicationWillEnterForegroundNotification object: nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTitle:) name:@"notificationReady" object: nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTitle:) name:@"notificationReady" object: nil];
 }
 
 - (void)unregisterNotifications {
     [[NSNotificationCenter defaultCenter] removeObserver:self name: UIApplicationDidEnterBackgroundNotification object: nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name: UIApplicationWillEnterForegroundNotification object: nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"notificationReady" object: nil];
+    //[[NSNotificationCenter defaultCenter] removeObserver:self name:@"notificationReady" object: nil];
 }
 
 #pragma mark - application notifications

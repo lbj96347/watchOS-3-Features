@@ -57,11 +57,11 @@
 }
 
 -(void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *,id> *)message replyHandler:(nonnull void (^)(NSDictionary<NSString *,id> * _Nonnull))replyHandler {
-    NSLog(@"apple watch is sending message %@" , message);
+    //NSLog(@"apple watch is sending message %@" , message);
     
     NSNotificationCenter * nsnc = [NSNotificationCenter defaultCenter];
-    //[nsnc postNotificationName:@"notificationAcceleration" object:message];
-    [nsnc postNotificationName:@"notificationReady" object:self userInfo:@{@"msg":@"ok"}];
+    [nsnc postNotificationName:@"notificationAcceleration" object:self userInfo:message];
+    //[nsnc postNotificationName:@"notificationReady" object:self userInfo:@{@"msg":@"ok"}];
     
 }
 

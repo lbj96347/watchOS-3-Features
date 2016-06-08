@@ -54,16 +54,14 @@
         ARCONTROLLER_Device_Start (_deviceController);
     }
     
-    /*
     NSNotificationCenter * nsnc = [NSNotificationCenter defaultCenter];
     [nsnc addObserver:self selector:@selector(updateMotionOfAircraft:) name:@"notificationAcceleration" object:nil];
-     */
     
 }
 
 - (void)disconnect {
     ARCONTROLLER_Device_Stop (_deviceController);
-    //[[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"notificationAcceleration" object:nil];
 }
 
 - (eARCONTROLLER_DEVICE_STATE)connectionState {
@@ -164,7 +162,43 @@
 
 -(void)updateMotionOfAircraft:(NSNotification *)notification {
     
-    NSLog(@"print motion : %@" , [notification userInfo] );
+    NSDictionary * acData = [notification userInfo];
+    
+    NSLog(@"print motion : %@" , acData );
+    
+    int xValue = (int)([acData[@"x"] floatValue] * 100 );
+    int yValue = (int)([acData[@"y"] floatValue] * 100 );
+    
+    if ( 100 > abs(xValue) && abs(xValue) > 50 ) {
+        if (xValue > 0) {
+            //前进
+            [self setFlag:1];
+            [self setPitch:50];
+        }else{
+            //后退
+            [self setFlag:1];
+            [self setPitch:-50];
+        }
+    }else{
+        [self setFlag:0];
+        [self setPitch:0];
+    }
+    
+    if ( 100 > abs(yValue) && abs(yValue) > 50 ) {
+        if (yValue > 0) {
+            //往左
+            [self setFlag:1];
+            [self setRoll:-50];
+        }else{
+            //往右
+            [self setFlag:1];
+            [self setRoll:50];
+        }
+    }else{
+        [self setFlag:0];
+        [self setRoll:0];
+    }
+    
     
 }
 
@@ -199,30 +233,37 @@
     }
 }
 
+//Y轴
 - (void)setPitch:(uint8_t)pitch {
     if (_deviceController && (_connectionState == ARCONTROLLER_DEVICE_STATE_RUNNING)) {
         _deviceController->miniDrone->setPilotingPCMDPitch(_deviceController->miniDrone, pitch);
     }
 }
 
+
+//X轴
 - (void)setRoll:(uint8_t)roll {
     if (_deviceController && (_connectionState == ARCONTROLLER_DEVICE_STATE_RUNNING)) {
         _deviceController->miniDrone->setPilotingPCMDRoll(_deviceController->miniDrone, roll);
     }
 }
 
+//Z轴
 - (void)setYaw:(uint8_t)yaw {
     if (_deviceController && (_connectionState == ARCONTROLLER_DEVICE_STATE_RUNNING)) {
         _deviceController->miniDrone->setPilotingPCMDYaw(_deviceController->miniDrone, yaw);
     }
 }
 
+//上升油门
 - (void)setGaz:(uint8_t)gaz {
     if (_deviceController && (_connectionState == ARCONTROLLER_DEVICE_STATE_RUNNING)) {
         _deviceController->miniDrone->setPilotingPCMDGaz(_deviceController->miniDrone, gaz);
     }
 }
 
+
+//下降油门
 - (void)setFlag:(uint8_t)flag {
     if (_deviceController && (_connectionState == ARCONTROLLER_DEVICE_STATE_RUNNING)) {
         _deviceController->miniDrone->setPilotingPCMDFlag(_deviceController->miniDrone, flag);

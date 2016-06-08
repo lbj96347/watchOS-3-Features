@@ -32,8 +32,8 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
         self.motionMgr?.accelerometerUpdateInterval = 0.1
         if(WCSession.isSupported()){
             self.defaultSession = WCSession.defaultSession()
-            self.defaultSession?.activateSession()
             self.defaultSession?.delegate = self;
+            self.defaultSession?.activateSession()
         }
     }
 
