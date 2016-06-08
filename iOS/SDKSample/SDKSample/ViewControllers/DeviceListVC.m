@@ -20,6 +20,7 @@
 @interface DeviceListVC () <UITableViewDelegate, UITableViewDataSource, DroneDiscovererDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 
 @property (nonatomic, strong) NSArray *dataSource;
 
@@ -87,11 +88,13 @@
 - (void)registerNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enteredBackground:) name: UIApplicationDidEnterBackgroundNotification object: nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForeground:) name: UIApplicationWillEnterForegroundNotification object: nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTitle:) name:@"notificationReady" object: nil];
 }
 
 - (void)unregisterNotifications {
     [[NSNotificationCenter defaultCenter] removeObserver:self name: UIApplicationDidEnterBackgroundNotification object: nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name: UIApplicationWillEnterForegroundNotification object: nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"notificationReady" object: nil];
 }
 
 #pragma mark - application notifications
@@ -101,6 +104,10 @@
 
 - (void)enteredBackground:(NSNotification*)notification {
     [_droneDiscoverer stopDiscovering];
+}
+
+- (void)updateTitle:(NSNotification*)notification {
+    self.titleLabel.text = @"Parrot SDK Sample ( Watch is Ready )";
 }
 
 #pragma mark UITableViewDataSource

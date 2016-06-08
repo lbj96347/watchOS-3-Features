@@ -26,11 +26,13 @@
                         <label alignment="center" text="z : 0" id="XMp-YG-nDO">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </label>
-                        <dateLabel width="1" alignment="left" textAlignment="center" id="N3e-Lc-uqu">
-                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            <dateFormatterStyle key="dateStyle" short="YES"/>
-                            <dateFormatterStyle key="timeStyle" short="YES"/>
-                        </dateLabel>
+                        <button width="1" alignment="left" title="Test Connect" id="QSJ-io-o9d">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="1" green="0.32065636272186371" blue="0.2898415772037729" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="testSendMsg" destination="AgC-eL-Hgc" id="dga-dy-vAW"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="statusLabel" destination="Vpk-GY-kdK" id="3by-hV-7GT"/>

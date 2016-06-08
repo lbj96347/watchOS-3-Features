@@ -39,7 +39,7 @@
                                 <rect key="frame" x="200" y="69" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Qky-gC-qYP"/>
-                                    <constraint firstAttribute="width" constant="200" id="hb9-lC-jg8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="hb9-lC-jg8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,6 +68,7 @@
                     <navigationItem key="navigationItem" id="PEz-pM-ugP"/>
                     <connections>
                         <outlet property="tableView" destination="gfJ-oK-GOz" id="UhC-z5-Xng"/>
+                        <outlet property="titleLabel" destination="qLv-9k-2nl" id="Sjt-pv-GWB"/>
                         <segue destination="ZcK-aM-eJq" kind="show" identifier="bebopSegue" id="Hmv-ib-rQY">
                             <nil key="action"/>
                         </segue>

@@ -30,9 +30,11 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
         self.motionMgr = motionManager
         self.motionQueue = NSOperationQueue.mainQueue()
         self.motionMgr?.accelerometerUpdateInterval = 0.1
-        self.defaultSession = WCSession.defaultSession()
-        self.defaultSession?.activateSession()
-        self.defaultSession?.delegate = self;
+        if(WCSession.isSupported()){
+            self.defaultSession = WCSession.defaultSession()
+            self.defaultSession?.activateSession()
+            self.defaultSession?.delegate = self;
+        }
     }
 
     override func willActivate() {
@@ -47,11 +49,13 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
             self.statusLabel?.setTitle("Error")
         }
         
-        self.defaultSession?.sendMessage(["msg":"hello"], replyHandler: { (replyMsg) in
-            //
-        }, errorHandler: { (error) in
-            //
-        })
+        if(WCSession.isSupported()){
+            self.defaultSession?.sendMessage(["msg":"hello"], replyHandler: { (replyMsg) in
+                //
+            }, errorHandler: { (error) in
+                //
+            })
+        }
         
         //handle methods of acceleration
         
@@ -61,7 +65,6 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
         
         if( self.motionMgr?.accelerometerActive == false ){
             
-            self.statusLabel?.setTitle("Stop")
             
             self.xLabel?.setText("x : 0")
             self.yLabel?.setText("y : 0")
@@ -69,6 +72,9 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
             
             self.motionMgr?.startAccelerometerUpdatesToQueue(self.motionQueue!, withHandler: { (accel, error) in
                 if((error == nil)){
+                    
+                    self.statusLabel?.setTitle("Stop")
+                    
                     let data:CMAcceleration = (accel?.acceleration)!
                     print("ok \n x is : %@ \n and y is %@ \n z is %@" , data.x , data.y , data.z)
                     let x:String = String("x : \(data.x)" )
@@ -92,18 +98,31 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
                     
                 }else{
                     print(error?.localizedDescription)
+                    
+                    self.statusLabel?.setTitle("Restart")
                 }
             })
            
             
         }else{
             
-            self.statusLabel?.setTitle("Start")
-            
             self.motionMgr?.stopAccelerometerUpdates()
+            
+            self.statusLabel?.setTitle("Start")
             
         }
         
+    }
+    
+    @IBAction func testSendMsg(){
+        print("Send test msg")
+        if(WCSession.isSupported()){
+            self.defaultSession?.sendMessage(["msg":"Test"], replyHandler: { (replyMsg) in
+                //
+            }, errorHandler: { (error) in
+                //
+            })
+        }
     }
     
     override func didDeactivate() {

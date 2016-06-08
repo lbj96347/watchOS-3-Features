@@ -54,13 +54,16 @@
         ARCONTROLLER_Device_Start (_deviceController);
     }
     
+    /*
     NSNotificationCenter * nsnc = [NSNotificationCenter defaultCenter];
     [nsnc addObserver:self selector:@selector(updateMotionOfAircraft:) name:@"notificationAcceleration" object:nil];
+     */
     
 }
 
 - (void)disconnect {
     ARCONTROLLER_Device_Stop (_deviceController);
+    //[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (eARCONTROLLER_DEVICE_STATE)connectionState {
@@ -159,9 +162,9 @@
 
 #pragma mark update aircraft motion 
 
--(void)updateMotionOfAircraft:(id)sender {
+-(void)updateMotionOfAircraft:(NSNotification *)notification {
     
-    NSLog(@"print motion : %@" , sender );
+    NSLog(@"print motion : %@" , [notification userInfo] );
     
 }
 
