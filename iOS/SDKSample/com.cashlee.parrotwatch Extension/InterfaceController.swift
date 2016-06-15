@@ -15,10 +15,10 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController , WCSessionDelegate {
     
     var motionMgr:CMMotionManager?
-    var motionQueue:NSOperationQueue?
+    var motionQueue:OperationQueue?
     
     var altimeterMgr:CMAltimeter?
-    var altimeterQueue:NSOperationQueue?
+    var altimeterQueue:OperationQueue?
     
     var defaultSession:WCSession?
     
@@ -27,14 +27,14 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
     @IBOutlet var yLabel: WKInterfaceLabel!
     @IBOutlet var zLabel: WKInterfaceLabel!
 
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: AnyObject?) {
+        super.awake(withContext: context)
         // Configure interface objects here.
         
         let motionManager:CMMotionManager = CMMotionManager.init()
         self.motionMgr = motionManager
-        self.motionQueue = NSOperationQueue.mainQueue()
-        self.motionMgr?.accelerometerUpdateInterval = 0.35
+        self.motionQueue = OperationQueue.main()
+        self.motionMgr?.accelerometerUpdateInterval = 0.35 //Hit the prioaty send too much message
         
         /*
         let altimeterManager:CMAltimeter = CMAltimeter.init()
@@ -43,9 +43,9 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
         */
         
         if(WCSession.isSupported()){
-            self.defaultSession = WCSession.defaultSession()
+            self.defaultSession = WCSession.default()
             self.defaultSession?.delegate = self;
-            self.defaultSession?.activateSession()
+            self.defaultSession?.activate()
         }
         
     }
@@ -54,7 +54,7 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        if( self.motionMgr?.accelerometerAvailable == true ){
+        if( self.motionMgr?.isAccelerometerAvailable == true ){
             //self.presentAlertControllerWithTitle("Ready", message: "Accelerometer is ready", preferredStyle: .Alert , actions: [action1])
             self.statusLabel?.setTitle("Start")
         }else{
@@ -76,7 +76,7 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
     
     @IBAction func switchMotion(sender:AnyObject){
         
-        if( self.motionMgr?.accelerometerActive == false ){
+        if( self.motionMgr?.isAccelerometerActive == false ){
             
             
             self.xLabel?.setText("x : 0")
@@ -97,7 +97,7 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
             })
             */
             
-            self.motionMgr?.startAccelerometerUpdatesToQueue(self.motionQueue!, withHandler: { (accel, error) in
+            self.motionMgr?.startAccelerometerUpdates(to: self.motionQueue!, withHandler: { (accel, error) in
                 if((error == nil)){
                     
                     self.statusLabel?.setTitle("Stop")
@@ -154,6 +154,10 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
                 //
             })
         }
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: NSError?) {
+        //
     }
     
     override func didDeactivate() {
