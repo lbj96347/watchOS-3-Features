@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055.6"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -11,24 +11,24 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="com_cashlee_parrotwatch" customModuleProvider="target">
                     <items>
                         <button width="1" alignment="left" title="Ready" id="Vpk-GY-kdK">
-                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="backgroundColor" red="0.19453099718792122" green="0.87434554973821987" blue="0.19196446650946847" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.19453099718792122" green="0.87434554973821987" blue="0.19196446650946847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="switchMotion:" destination="AgC-eL-Hgc" id="T6Y-Ty-HBv"/>
+                                <action selector="switchMotionWithSender:" destination="AgC-eL-Hgc" id="hhI-os-ec1"/>
                             </connections>
                         </button>
                         <label alignment="center" text="x : 0" id="0z8-iy-R5L">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </label>
-                        <label alignment="center" text="y : 0" id="IWS-UH-qNc">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <label height="20" alignment="center" text="y : 0" id="IWS-UH-qNc">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </label>
                         <label alignment="center" text="z : 0" id="XMp-YG-nDO">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </label>
                         <button width="1" alignment="left" title="Test Connect" id="QSJ-io-o9d">
-                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="backgroundColor" red="1" green="0.32065636272186371" blue="0.2898415772037729" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="0.32065636272186371" blue="0.2898415772037729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="testSendMsg" destination="AgC-eL-Hgc" id="dga-dy-vAW"/>
                             </connections>
