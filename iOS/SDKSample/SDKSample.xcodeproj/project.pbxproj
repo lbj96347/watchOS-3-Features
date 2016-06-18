@@ -14,6 +14,7 @@
 		6618959B1D06CB34009BD6EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6618959A1D06CB34009BD6EF /* Assets.xcassets */; };
 		6618959F1D06CB34009BD6EF /* com.cashlee.parrotwatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 661895851D06CB33009BD6EF /* com.cashlee.parrotwatch.app */; };
 		66EE34D41D12137400688192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6618959A1D06CB34009BD6EF /* Assets.xcassets */; };
+		EA570F981D15D7E4004C5947 /* CrownDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA570F971D15D7E4004C5947 /* CrownDelegate.swift */; };
 		F828FA6A1C8604150075E867 /* JSDrone.m in Sources */ = {isa = PBXBuildFile; fileRef = F828FA691C8604150075E867 /* JSDrone.m */; };
 		F828FA701C8608B90075E867 /* JSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F828FA6F1C8608B90075E867 /* JSVC.m */; };
 		F828FA731C860BEB0075E867 /* JSVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F828FA721C860BEB0075E867 /* JSVideoView.m */; };
@@ -85,6 +86,7 @@
 		661895981D06CB34009BD6EF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		6618959A1D06CB34009BD6EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6618959C1D06CB34009BD6EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA570F971D15D7E4004C5947 /* CrownDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrownDelegate.swift; sourceTree = "<group>"; };
 		F828FA681C8604150075E867 /* JSDrone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSDrone.h; path = Drones/JSDrone.h; sourceTree = "<group>"; };
 		F828FA691C8604150075E867 /* JSDrone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSDrone.m; path = Drones/JSDrone.m; sourceTree = "<group>"; };
 		F828FA6E1C8608B90075E867 /* JSVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSVC.h; path = ViewControllers/JSVC.h; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				661895961D06CB34009BD6EF /* InterfaceController.swift */,
 				661895981D06CB34009BD6EF /* ExtensionDelegate.swift */,
+				EA570F971D15D7E4004C5947 /* CrownDelegate.swift */,
 				6618959A1D06CB34009BD6EF /* Assets.xcassets */,
 				6618959C1D06CB34009BD6EF /* Info.plist */,
 			);
@@ -417,6 +420,7 @@
 			files = (
 				661895991D06CB34009BD6EF /* ExtensionDelegate.swift in Sources */,
 				661895971D06CB34009BD6EF /* InterfaceController.swift in Sources */,
+				EA570F981D15D7E4004C5947 /* CrownDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
