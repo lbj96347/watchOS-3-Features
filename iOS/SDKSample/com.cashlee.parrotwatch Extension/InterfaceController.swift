@@ -23,6 +23,7 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
     var defaultSession:WCSession?
 
     var crowDelegate: CrowDelegate?
+    var crowEventsHandler: CrowEventsHandler?
 
     @IBOutlet var statusLabel: WKInterfaceButton!
     @IBOutlet var xLabel: WKInterfaceLabel!
@@ -56,6 +57,8 @@ class InterfaceController: WKInterfaceController , WCSessionDelegate {
     func initCrowDelegate() {
         if #available(watchOSApplicationExtension 3.0, *) {
             crowDelegate = CrowDelegate()
+            crowEventsHandler = CrowEventsHandler()
+            crowDelegate?.delegate = crowEventsHandler
             crownSequencer.delegate = crowDelegate
             crownSequencer.focus()
         }

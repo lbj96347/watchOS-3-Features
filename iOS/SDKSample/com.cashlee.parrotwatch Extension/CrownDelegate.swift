@@ -2,6 +2,8 @@ import WatchKit
 
 class CrowDelegate: NSObject, WKCrownDelegate {
 
+    weak var delegate: CrowEventsDelegate?
+
     var rotating = false
 
     @available(watchOSApplicationExtension 3.0, *)
@@ -18,15 +20,15 @@ class CrowDelegate: NSObject, WKCrownDelegate {
         }
 
         if rotationalDelta > 0 {
-            print("up")
+            delegate?.crownIsRotatingUp()
         } else {
-            print("down")
+            delegate?.crownIsRotatingDown()
         }
     }
 
     @available(watchOSApplicationExtension 3.0, *)
     func crownDidBecomeIdle(_ crownSequencer: WKCrownSequencer?) {
         rotating = false
-        print("stop")
+        delegate?.crownStopped()
     }
 }
