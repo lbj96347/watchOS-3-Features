@@ -1,14 +1,34 @@
+import WatchConnectivity
+
 class CrowEventsHandler: CrowEventsDelegate {
 
+    var defaultSession:WCSession?
+
+    init() {
+        if(WCSession.isSupported()){
+            defaultSession = WCSession.default()
+            defaultSession?.activate()
+        }
+    }
+
     func crownIsRotatingUp() {
-        print("up")
+        sendMessage("up")
     }
 
     func crownIsRotatingDown() {
-        print("down")
+        sendMessage("down")
     }
 
     func crownStopped() {
-        print("stop")
+        sendMessage("stop")
+    }
+
+    func sendMessage(_ message: String) {
+        if defaultSession?.isReachable ?? false {
+            let sendData: [String:AnyObject] = ["altitude":message]
+            defaultSession?.sendMessage(sendData,
+                                        replyHandler: nil,
+                                        errorHandler: nil)
+        }
     }
 }

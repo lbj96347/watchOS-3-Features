@@ -56,12 +56,13 @@
     
     NSNotificationCenter * nsnc = [NSNotificationCenter defaultCenter];
     [nsnc addObserver:self selector:@selector(updateMotionOfAircraft:) name:@"notificationAcceleration" object:nil];
-    
+    [nsnc addObserver:self selector:@selector(updateAltitudeOfAircraft:) name:@"notificationAltitude" object:nil];
 }
 
 - (void)disconnect {
     ARCONTROLLER_Device_Stop (_deviceController);
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"notificationAcceleration" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"notificationAltitude" object:nil];
 }
 
 - (eARCONTROLLER_DEVICE_STATE)connectionState {
@@ -201,6 +202,28 @@
     
 }
 
+#pragma mark update aircraft altitude
+
+-(void)updateAltitudeOfAircraft:(NSNotification *)notification {
+
+    NSDictionary *altitude = [notification userInfo];
+    NSString *direction = altitude[@"altitude"];
+
+    if ([direction isEqualToString:@"up"]) {
+        [self setGaz:+50];
+        NSLog(@"setGaz +50");
+    }
+
+    if ([direction isEqualToString:@"down"]) {
+        [self setGaz:-50];
+        NSLog(@"setGaz -50");
+    }
+
+    if ([direction isEqualToString:@"stop"]) {
+        [self setGaz:0];
+        NSLog(@"setGaz 0");
+    }
+}
 
 #pragma mark commands
 - (void)emergency {

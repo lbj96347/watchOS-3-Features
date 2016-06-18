@@ -58,8 +58,14 @@
 
 -(void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *,id> *)message replyHandler:(nonnull void (^)(NSDictionary<NSString *,id> * _Nonnull))replyHandler {
     NSNotificationCenter * nsnc = [NSNotificationCenter defaultCenter];
-    [nsnc postNotificationName:@"notificationAcceleration" object:self userInfo:message];
-    
+
+    if (message[@"altitude"]) {
+        [nsnc postNotificationName:@"notificationAltitude" object:self userInfo:message];
+    } else {
+        [nsnc postNotificationName:@"notificationAcceleration" object:self userInfo:message];
+    }
+
+
     /*
     if ( [message objectForKey:@"altitude"] ) {
         NSLog(@"apple watch is sending message %@" , message[@"altitude"]);
