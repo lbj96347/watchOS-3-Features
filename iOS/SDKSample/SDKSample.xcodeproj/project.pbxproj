@@ -328,19 +328,19 @@
 				TargetAttributes = {
 					661895841D06CB33009BD6EF = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = EE9BGDTG7V;
-						DevelopmentTeamName = "Bingjun Li (Personal Team)";
+						DevelopmentTeam = 4C34FT6ABU;
+						DevelopmentTeamName = "Tiago Martinho";
 					};
 					661895901D06CB34009BD6EF = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = EE9BGDTG7V;
-						DevelopmentTeamName = "Bingjun Li (Personal Team)";
+						DevelopmentTeam = 4C34FT6ABU;
+						DevelopmentTeamName = "Tiago Martinho";
 						LastSwiftMigration = 0800;
 					};
 					F8B03D821C7DA4E900149B4F = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = EE9BGDTG7V;
-						DevelopmentTeamName = "Bingjun Li (Personal Team)";
+						DevelopmentTeam = 4C34FT6ABU;
+						DevelopmentTeamName = "Tiago Martinho";
 					};
 				};
 			};
@@ -532,7 +532,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = DebugWithPrecompiledSDK;
 		};
@@ -583,7 +583,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = DebugWithLocalSDK;
 		};
@@ -600,7 +600,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
 		};
@@ -652,7 +652,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = DebugWithPrecompiledSDK;
 		};
@@ -704,7 +704,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = DebugWithLocalSDK;
 		};
@@ -721,7 +721,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
 		};
@@ -778,7 +778,7 @@
 				"HEADER_SEARCH_PATHS[sdk=iphoneos*]" = "../../../../out/iOS-iphoneos/staging/usr/include";
 				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = "../../../../out/iOS-iphonesimulator/staging/usr/include";
 				INFOPLIST_FILE = SDKSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "../../../../out/iOS-iphoneos/staging/usr/lib";
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "../../../../out/iOS-iphonesimulator/staging/usr/lib";
@@ -898,7 +898,7 @@
 				"HEADER_SEARCH_PATHS[sdk=iphoneos*]" = "ARSDK3_iOS/iOS-iphoneos/staging/usr/include";
 				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = "ARSDK3_iOS/iOS-iphonesimulator/staging/usr/include";
 				INFOPLIST_FILE = SDKSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "ARSDK3_iOS/iOS-iphoneos/staging/usr/lib";
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "ARSDK3_iOS/iOS-iphonesimulator/staging/usr/lib";
@@ -936,7 +936,7 @@
 				"HEADER_SEARCH_PATHS[sdk=iphoneos*]" = "ARSDK3_iOS/iOS-iphoneos/staging/usr/include";
 				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = "ARSDK3_iOS/iOS-iphonesimulator/staging/usr/include";
 				INFOPLIST_FILE = SDKSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "ARSDK3_iOS/iOS-iphoneos/staging/usr/lib";
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "ARSDK3_iOS/iOS-iphonesimulator/staging/usr/lib";
